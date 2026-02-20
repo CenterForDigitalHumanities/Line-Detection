@@ -1,0 +1,14 @@
+[build]
+  # No build step needed — this is a static HTML/JS site
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Disable automatic Netlify branch deploys (controlled via GitHub Actions)
+[context.branch-deploy]
+  publish = "."
+
+# PR deploy previews
+[context.deploy-preview]
+  publish = "."
