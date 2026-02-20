@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Detection</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+        h1 { color: #a64129; }
+        h2 { border-bottom: 2px solid #a64129; padding-bottom: 6px; }
+        a { color: #a64129; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        pre { background: #f4f4f4; padding: 14px; border-radius: 6px; overflow-x: auto; }
+        ul { line-height: 1.8; }
+    </style>
+</head>
+<body>
+    <h1>Line Detection</h1>
+    <p>Browser-only components and a TPEN 3 interface for automatically detecting handwriting lines in manuscript images.  All processing runs in the browser using the Canvas 2D API — no server-side backend required.</p>
+
+    <h2>Components</h2>
+    <ul>
+        <li>
+            <strong><code>components/line-detection/</code></strong> —
+            <code>&lt;handwriting-line-detector&gt;</code> Custom Element + core detection algorithms
+            (<a href="components/line-detection/index.js">index.js</a>,
+             <a href="components/line-detection/detection.js">detection.js</a>)
+        </li>
+    </ul>
+
+    <h2>Interfaces</h2>
+    <ul>
+        <li>
+            <strong>Line Detection</strong> —
+            TPEN 3 interface for running detection and saving results as annotations<br>
+            <a href="interfaces/line-detection/index.html?projectID=&amp;pageID=">interfaces/line-detection/</a>
+            <em>(requires <code>?projectID=&hellip;&amp;pageID=&hellip;</code> URL parameters and a TPEN 3 login)</em>
+        </li>
+    </ul>
+
+    <h2>Quick Component Demo</h2>
+    <p>Drop the <code>&lt;handwriting-line-detector&gt;</code> element anywhere and point its <code>src</code> at a CORS-enabled IIIF image:</p>
+    <pre>&lt;script type="module" src="components/line-detection/index.js"&gt;&lt;/script&gt;
+&lt;handwriting-line-detector
+  src="https://www.e-codices.ch/loris/ssg%2Fssg-0016%2Fssg-0016_009v.jp2/full/full/0/default.jpg"&gt;
+&lt;/handwriting-line-detector&gt;</pre>
+
+    <p>See the <a href="README.md">README</a> for full documentation.</p>
+</body>
+</html>
